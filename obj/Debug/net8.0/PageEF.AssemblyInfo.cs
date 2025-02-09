@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PageEF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67bfa224e7ddf0618b41ed6fb0fb67d4fa31baa2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a29506ee83a2a67433a150d67b9c6d538bcb67c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PageEF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PageEF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
