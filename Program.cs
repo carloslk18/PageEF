@@ -5,7 +5,6 @@ using PageEF.Models;
 namespace PageEF{
 
 class Program{
-    
 
     public static void Main (string[] args){
 
