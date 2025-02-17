@@ -8,6 +8,5 @@ public class Tag{
 
     public IList<Post> Posts {get; set;}
 
-
 }
 }

@@ -4,14 +4,16 @@ using PageEF.Models;
 
 namespace PageEF.Data.Mappings{
 
-    public class CategoryMap : IEntityTypeConfiguration<Category>
-    {
-        public void Configure(EntityTypeBuilder<Category> builder)
-        {
+    public class CategoryMap : IEntityTypeConfiguration<Category>{
+        public void Configure(EntityTypeBuilder<Category> builder){
+                       
+            //table
             builder.ToTable("Category");
 
+            //primary key
             builder.HasKey(x => x.Id);
 
+            //identity
             builder.Property(x => x.Id)
             .ValueGeneratedOnAdd()
             .UseIdentityColumn();
@@ -28,9 +30,9 @@ namespace PageEF.Data.Mappings{
             .HasColumnType("VARCHAR")
             .HasMaxLength(80);
 
+            //index
             builder.HasIndex(x => x.Slug, "IX_Category_Slug")
             .IsUnique();
-
         }
     }
 }
