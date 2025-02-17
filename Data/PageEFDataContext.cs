@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PageEF.Data.Mappings;
 using PageEF.Models;
 
 namespace PageEF.Data{
@@ -10,12 +11,21 @@ public class PageEFDataContext : DbContext{
     public DbSet<Category> Categories{get; set;}
     public DbSet<Post> Posts{get; set;}
     public DbSet<Tag> Tags{get; set;}
+   
     //public DbSet<UserRole> UserRoles{get; set;}
     //public DbSet<PostTag> PostTags{get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer("Server=localhost,1433;Database=SlkDB;User ID=sa;Password=1q2w3e4r@#$;TrustServerCertificate=True");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new PostMap());
+
         }
     }
 }
