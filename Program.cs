@@ -31,8 +31,17 @@ class Program{
         post.Category = new Category{
             Name = "Test category",
             Slug = "test-slug"
-
-        
+                var user = ctx.Users.FirstOrDefault();
+        var post = new Post();
+        post.Author = null;
+        post.Title = "Meu artigo";
+        post.Summary = "Neste artigo vamos conferir..";
+        post.Body = "Meu artigo";
+        post.Slug = "meu-artigo";
+        post.CreateDate = DateTime.Now;
+        post.Category = new Category{
+            Name = "Test category",
+            Slug = "test-slug" 
 
         };
         ctx.Posts.Add(post);
