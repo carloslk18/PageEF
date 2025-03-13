@@ -32,9 +32,6 @@ class Program{
             Name = "Test category",
             Slug = "test-slug"
                 var user = ctx.Users.FirstOrDefault();
-        var post = new Post();
-        post.Author = null;
-        post.Title = "Meu artigo";
      
         ctx.Posts.Add(post);
         ctx.SaveChanges();
