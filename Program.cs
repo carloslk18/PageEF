@@ -35,10 +35,7 @@ class Program{
 
              var user = ctx.Users.FirstOrDefault();
         var post = new Post();
-        post.Author = null;
-        post.Title = "Meu artigo";
-        post.Summary = "Neste artigo vamos conferir..";
-        post.Body = "Meu artigo";
+
    
      
         ctx.Posts.Add(post);
