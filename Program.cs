@@ -31,13 +31,7 @@ class Program{
         post.Category = new Category{
             Name = "Test category",
             Slug = "test-slug"
-                var user = ctx.Users.FirstOrDefault();
-
-             var user = ctx.Users.FirstOrDefault();
-        var post = new Post();
-
-   
-     
+                var user = ctx.Users.FirstOrDefault();     
         ctx.Posts.Add(post);
         ctx.SaveChanges();
     }
